@@ -11,9 +11,10 @@ const App = () => {
         successDuration:1000
     });
 
-    //subscribe to thapa technical for more awesome videos
+    const language='en-IN'
 
-    const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
+
+    const startListening = () => SpeechRecognition.startListening({ continuous: true, language: {language} });
     const { transcript, browserSupportsSpeechRecognition } = useSpeechRecognition();
 
     if (!browserSupportsSpeechRecognition) {
@@ -25,8 +26,7 @@ const App = () => {
             <div className="container">
                 <h2>Speech to Text Converter</h2>
                 <br/>
-                <p>A React hook that converts speech from the microphone to text and makes it available to your React
-                    components.</p>
+                <p>Give an input of english from the microphone and you will get the text.</p>
 
                 <div className="main-content" onClick={() =>  setTextToCopy(transcript)}>
                     {transcript}
