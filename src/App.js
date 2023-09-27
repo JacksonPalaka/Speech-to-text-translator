@@ -11,7 +11,7 @@ const App = () => {
     });
 
     const [lan,setLan]=useState('English input')
-    const [languages,setLanguages]= useState('hi-IN')
+    const [languages,setLanguages]= useState('en-IN')
     const handleSelect=()=>{
         if (languages==='en-IN'){
             setLanguages('hi-IN')
